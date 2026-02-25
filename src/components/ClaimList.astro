@@ -1,0 +1,18 @@
+---
+import ReceiptLink from "./ReceiptLink.astro";
+
+const { claims } = Astro.props;
+---
+
+<ul class="claim-list">
+  {claims.map((item) => (
+    <li class="claim-item">
+      <p>{item.claim}</p>
+      <ReceiptLink
+        label={item.receiptLabel}
+        url={item.receiptUrl}
+        type={item.receiptType}
+      />
+    </li>
+  ))}
+</ul>

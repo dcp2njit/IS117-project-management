@@ -1,10 +1,12 @@
 ---
 import ProjectMeta from "./ProjectMeta.astro";
 
-const { title, role, stack, outcome } = Astro.props;
+const { title, role, stack, outcome, href } = Astro.props;
 ---
 
 <article class="project-card">
-  <h3>{title}</h3>
-  <ProjectMeta role={role} stack={stack} outcome={outcome} />
+  <a class="project-card-link" href={href}>
+    <h3>{title}</h3>
+    <ProjectMeta role={role} stack={stack} outcome={outcome} />
+  </a>
 </article>

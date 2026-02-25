@@ -17,6 +17,7 @@ const projects = (await getCollection("projects"))
           role={entry.data.role}
           stack={entry.data.stack.join(", ")}
           outcome={entry.data.outcomes[0]}
+          href={`/work/${entry.slug}`}
         />
       ))}
     </div>

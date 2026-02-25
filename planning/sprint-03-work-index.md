@@ -45,6 +45,6 @@ What not to do (scope creep)
 - Do not change content schema
 
 Completion evidence
-- URL: TBD
-- Screenshot: TBD
-- PR/commit: TBD
+- URL: [TlinkD](http://localhost:4321/)
+- Screenshot: ![TBD](<../completed/evidence/Screenshot 2026-02-24 202733.png>)
+- PR/commit: [TBD](https://github.com/dcp2njit/IS117-project-management/commit/393c4b929e8aad798b48b0bdf3f992d3cfa5ec22)

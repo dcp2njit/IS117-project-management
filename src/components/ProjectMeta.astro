@@ -1,9 +1,13 @@
 ---
-const { role, stack, outcome } = Astro.props;
+const { role, timeframe, team, stack, outcome } = Astro.props;
+
+const stackLabel = Array.isArray(stack) ? stack.join(", ") : stack;
 ---
 
-<ul class="project-meta">
-  <li><strong>Role:</strong> {role}</li>
-  <li><strong>Stack:</strong> {stack}</li>
-  <li><strong>Outcome:</strong> {outcome}</li>
+<ul class="project-meta snapshot-grid">
+  {role ? <li><strong>Role:</strong> {role}</li> : null}
+  {timeframe ? <li><strong>Timeframe:</strong> {timeframe}</li> : null}
+  {team ? <li><strong>Team:</strong> {team}</li> : null}
+  {stackLabel ? <li><strong>Stack:</strong> {stackLabel}</li> : null}
+  {outcome ? <li><strong>Outcome:</strong> {outcome}</li> : null}
 </ul>

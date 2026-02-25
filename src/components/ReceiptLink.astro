@@ -1,0 +1,7 @@
+---
+const { label, url, type } = Astro.props;
+---
+
+<a href={url} class="receipt-link">
+  {label} {type ? `(${type})` : ""}
+</a>

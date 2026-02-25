@@ -1,0 +1,99 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClaimList from "../../components/ClaimList.astro";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+const constraints = [
+  "Constraint placeholder 1.",
+  "Constraint placeholder 2.",
+  "Constraint placeholder 3.",
+];
+
+const approach = [
+  "Approach placeholder 1.",
+  "Approach placeholder 2.",
+];
+
+const reflections = [
+  "Reflection placeholder 1.",
+  "Reflection placeholder 2.",
+];
+---
+
+<BaseLayout title={data.title}>
+  <section class="container case-section">
+    <h1>{data.title}</h1>
+  </section>
+
+  <section class="container case-section">
+    <h2>Snapshot</h2>
+    <ProjectMeta
+      role={data.role}
+      timeframe={data.timeframe}
+      team={data.team}
+      stack={data.stack}
+    />
+  </section>
+
+  <section class="container case-section">
+    <h2>Problem</h2>
+    <p>{data.summary}</p>
+  </section>
+
+  <section class="container case-section">
+    <h2>Constraints</h2>
+    <ul class="case-list">
+      {constraints.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container case-section">
+    <h2>Approach</h2>
+    <ul class="case-list">
+      {approach.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container case-section">
+    <h2>Claims</h2>
+    <ClaimList claims={data.claims} />
+  </section>
+
+  <section class="container case-section">
+    <h2>Outcomes</h2>
+    <ul class="case-list">
+      {data.outcomes.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container case-section">
+    <h2>Reflection</h2>
+    <ul class="case-list">
+      {reflections.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container case-section">
+    <a class="back-link" href="/work/">Back to Work</a>
+  </section>
+</BaseLayout>
