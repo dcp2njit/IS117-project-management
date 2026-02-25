@@ -53,7 +53,7 @@ a:hover {
 }
 
 .site-header {
-  border-bottom: 1px solid #e3e3e0;
+  border-bottom: 1px solid #d8d8d3;
   background: #ffffff;
 }
 
@@ -74,21 +74,26 @@ a:hover {
 .site-nav {
   display: flex;
   gap: var(--space-3);
-  font-size: var(--type-1);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .site-main {
-  padding: var(--space-6) 0;
+  padding: var(--space-5) 0;
 }
 
 .site-footer {
-  border-top: 1px solid #e3e3e0;
+  border-top: 1px solid #d8d8d3;
   background: #ffffff;
   padding: var(--space-4) 0;
-  font-size: var(--type-1);
-  color: var(--color-muted);
+  font-size: 0.95rem;
+  color: #4f5258;
+}
+
+.hero p {
+  max-width: 52ch;
 }
 
 @media (max-width: 720px) {
