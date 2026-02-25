@@ -38,6 +38,8 @@ What not to do (scope creep)
 - Do not add extra sections beyond requirements
 
 Completion evidence
-- URL: TBD
-- Screenshot: TBD
+- URL: http://localhost:4321/contact/
+- Screenshot: ![about](<../completed/evidence/Screenshot 2026-02-24 211753.png>)
+![resume](<../completed/evidence/Screenshot 2026-02-24 211813.png>)
+![contact](<../completed/evidence/Screenshot 2026-02-24 211823.png>)
 - PR/commit: TBD
