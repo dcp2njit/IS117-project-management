@@ -1,30 +1,30 @@
 ---
-title: "Interface and UX Case Study"
-slug: "interface-ux"
+title: Interface and UX Case Study
+slug: interface-ux
 published: true
 featured: true
-role: "Role Placeholder"
-timeframe: "Timeframe Placeholder"
-team: "Team Placeholder"
+role: Role Placeholder
+timeframe: Timeframe Placeholder
+team: Team Placeholder
 stack:
-  - "Tech Placeholder"
-summary: "Summary placeholder for interface work."
+  - Tech Placeholder
+summary: Summary placeholder for interface work.
 outcomes:
-  - "Outcome placeholder."
+  - Outcome placeholder.
 claims:
-  - claim: "Claim placeholder."
-    receiptLabel: "Receipt 1"
-    receiptUrl: "https://example.com/receipt-1"
-    receiptType: "Link"
-  - claim: "Claim placeholder 2."
-    receiptLabel: "Receipt 2"
-    receiptUrl: "https://example.com/receipt-2"
-    receiptType: "Link"
-  - claim: "Claim placeholder 3."
-    receiptLabel: "Receipt 3"
-    receiptUrl: "https://example.com/receipt-3"
-    receiptType: "Link"
-heroImage: "/images/placeholder.jpg"
+  - claim: Claim placeholder.
+    receiptLabel: Receipt 1
+    receiptUrl: https://example.com/receipt-1
+    receiptType: Link
+  - claim: Claim placeholder 2.
+    receiptLabel: Receipt 2
+    receiptUrl: https://example.com/receipt-2
+    receiptType: Link
+  - claim: Claim placeholder 3.
+    receiptLabel: Receipt 3
+    receiptUrl: https://example.com/receipt-3
+    receiptType: Link
+heroImage: /images/placeholder.jpg
 ---
 
 Placeholder content.
