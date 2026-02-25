@@ -73,6 +73,7 @@ function main() {
   const files = walkFiles(contentDir);
   const errors = [];
   const hrefRegex = /href\s*=\s*"([^"]+)"/g;
+  const withBaseRegex = /href\s*=\s*\{withBase\(\"([^\"]+)\"\)\}/g;
 
   files.forEach((filePath) => {
     const raw = fs.readFileSync(filePath, "utf8");
@@ -98,6 +99,18 @@ function main() {
       }
 
       match = hrefRegex.exec(raw);
+    }
+
+    let baseMatch = withBaseRegex.exec(raw);
+    while (baseMatch) {
+      const href = baseMatch[1];
+      if (href.startsWith("/")) {
+        const normalized = normalizeHref(href);
+        if (!validRoutes.has(normalized)) {
+          errors.push(`${filePath}: invalid internal link ${href}`);
+        }
+      }
+      baseMatch = withBaseRegex.exec(raw);
     }
   });
 
