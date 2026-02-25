@@ -33,6 +33,12 @@ body {
   line-height: 1.6;
 }
 
+h1 {
+  font-size: var(--type-5);
+  line-height: 1.2;
+  margin: 0 0 var(--space-3);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -94,6 +100,54 @@ a:hover {
 
 .hero p {
   max-width: 52ch;
+}
+
+.section {
+  padding: var(--space-5) 0;
+}
+
+.section h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--type-4);
+  font-weight: 600;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid #e2e2dc;
+}
+
+.project-grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card {
+  border: 1px solid #e2e2dc;
+  padding: var(--space-5);
+  background: #ffffff;
+  min-height: 190px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.project-card h3 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--type-3);
+  font-weight: 600;
+}
+
+.project-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-muted);
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--type-1);
+  line-height: 1.5;
+}
+
+.project-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(17, 18, 20, 0.08);
 }
 
 @media (max-width: 720px) {

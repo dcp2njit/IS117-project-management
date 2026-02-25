@@ -1,5 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Section from "../components/Section.astro";
+
+const featuredProjects = (await getCollection("projects"))
+  .filter((entry) => entry.data.featured)
+  .slice(0, 3);
 ---
 
 <BaseLayout title="Minimal Systems">
@@ -7,4 +14,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h1>Portfolio Role Placeholder</h1>
     <p>Short description placeholder for the Minimal Systems portfolio.</p>
   </section>
+
+  <Section title="Featured Work">
+    <div class="project-grid">
+      {featuredProjects.map((entry) => (
+        <ProjectCard
+          title={entry.data.title}
+          role={entry.data.role}
+          stack={entry.data.stack.join(", ")}
+          outcome={entry.data.outcomes[0]}
+        />
+      ))}
+    </div>
+  </Section>
 </BaseLayout>

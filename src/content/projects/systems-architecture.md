@@ -1,8 +1,8 @@
 ---
 title: "Systems Architecture Case Study"
 slug: "systems-architecture"
-published: false
-featured: false
+published: true
+featured: true
 role: "Role Placeholder"
 timeframe: "Timeframe Placeholder"
 team: "Team Placeholder"

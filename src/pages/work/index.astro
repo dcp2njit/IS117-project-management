@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import Section from "../../components/Section.astro";
+
+const projects = (await getCollection("projects"))
+  .filter((entry) => entry.data.published);
+---
+
+<BaseLayout title="Work">
+  <Section title="Work">
+    <div class="project-grid">
+      {projects.map((entry) => (
+        <ProjectCard
+          title={entry.data.title}
+          role={entry.data.role}
+          stack={entry.data.stack.join(", ")}
+          outcome={entry.data.outcomes[0]}
+        />
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

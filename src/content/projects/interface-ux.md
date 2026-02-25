@@ -1,8 +1,8 @@
 ---
 title: "Interface and UX Case Study"
 slug: "interface-ux"
-published: false
-featured: false
+published: true
+featured: true
 role: "Role Placeholder"
 timeframe: "Timeframe Placeholder"
 team: "Team Placeholder"
