@@ -38,5 +38,5 @@ What not to do (scope creep)
 
 Completion evidence
 - URL: TBD
-- Screenshot: TBD
-- PR/commit: TBD
+- Screenshot: ![TBD](<../completed/evidence/Screenshot 2026-02-24 214321.png>)
+- PR/commit: [TBD](https://github.com/dcp2njit/IS117-project-management/commit/899c6300ff6c00d858edf1bb8bf09d9b67b9fbd3)
